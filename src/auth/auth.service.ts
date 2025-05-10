@@ -34,7 +34,9 @@ export class AuthService {
       email: dto.email,
       password: dto.password,
       role: 'tourist',
-      photo: dto.photo || 'http://localhost:3000/users/photo/noavatar.png',
+      photo:
+        dto.photo ||
+        'https://mlaku-mulu-production.up.railway.app/users/photo/noavatar.png',
     });
 
     const tourist = await this.touristsService.create({
